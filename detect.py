@@ -39,7 +39,6 @@ data_test=pd.DataFrame({'Text':x_test,'Emotion':y_test})
 data_real_test= pd.DataFrame({'Text':x_real_test,'Emotion':y_real_test})
 data_train.append(data_real_test,ignore_index=True)
 data=data_train.append(data_test,ignore_index=True)
-print("hello")
 
 def clean_text(data):
     data=re.sub(r"(#[\d\w\.]+)", '', data)
@@ -58,11 +57,6 @@ tokenizer.fit_on_texts(texts)
 def features():
     return "Hello World"
 
-
-# for f in range(5):
-#     print("%d. feature %d - %s (%f)" % (f + 1, indices[f], features[indices[f]] ,importances[indices[f]]))
-
-
 def diagnose(lis):
     print(lis)
     message = lis
@@ -70,7 +64,6 @@ def diagnose(lis):
     padded = pad_sequences(seq, maxlen=500)
     pred = model.predict(padded)
     return class_names[np.argmax(pred)]
-    return "disease[0]"
 
 
 
