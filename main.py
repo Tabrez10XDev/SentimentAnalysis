@@ -28,6 +28,6 @@ class Detect(Resource):
 api.add_resource(Features, '/')
 api.add_resource(Detect, '/detect')
 
-# # driver function
-# if __name__ == '__main__':
-#     app.run(debug=True)
+# driver function
+if __name__ == '__main__':
+    app.run(debug=True)
